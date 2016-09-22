@@ -1,0 +1,17 @@
+{
+  "name": "museumplus",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "aikovalenko <kovalenko.ai@yandex.ru>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/aikovalenko/mp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
