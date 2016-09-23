@@ -29,6 +29,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-uglifyjs": "^0.6.2",
-    "imagemin-pngquant": "^5.0.0"
+    "imagemin-pngquant": "^5.0.0",
+    "ngrok": "^2.2.3"
   }
 }

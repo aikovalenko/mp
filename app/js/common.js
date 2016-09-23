@@ -1,9 +1,10 @@
 $(window).on('load', function () {
     var preloader = $('.block_preloader'),
         itemN = $('.projects .block');
+
     setTimeout(function(){
         preloader.css({ "z-index": "0", "opacity": "0"});
-        itemN.css({ "filter": "blur(0)"});
+        itemN.css({ "filter": "blur(0)", "-webkit-filter": "blur(0)" });
         /*
         $.each(itemN, function(i, el) {
             setTimeout(function() {

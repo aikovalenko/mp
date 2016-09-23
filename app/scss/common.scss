@@ -42,8 +42,9 @@ body {
     padding-right: 150px;
     padding-bottom: 140px;
     padding: 8.9% 8% 9% 12.7%;
-    overflow: auto;
+    overflow: hidden;
     .logo {
+      width: 258px;
       margin-left: -28px;
       margin-bottom: 130px;
     }
@@ -52,6 +53,7 @@ body {
       //opacity: 0;
       transition: all .45s linear;
       overflow: hidden;
+      cursor: default;
       p {
         font-size: 17px;
         color: #1c1d18;
@@ -63,6 +65,11 @@ body {
       line-height: 50px;
       color: #040707;
       font-family: circle_bold;
+      transition: all .35s ease;
+      &:hover {
+        color: #ed9700;
+        transition: all .35s ease;
+      }
     }
     ul {
       margin: 0;
@@ -102,9 +109,15 @@ body {
       }
     }
     .open {
-      max-height: 300px;
+      max-height: 350px;
       opacity: 1;
       transition: all .45s linear;
+    }
+    .social {
+      margin-top: 80px;
+      width: 130px;
+      height: 40px;
+      background: #ed9700;
     }
   }
   .projects {
@@ -161,13 +174,34 @@ body {
           width: 100%;
           height: 100%;
           background-size: cover;
+          background-position: center;
           transition: all .35s ease-out;
+          z-index: 100;
         }
         .title {
+          display: table;
           position: absolute;
           bottom: 0;
           left: 0;
+          width: 100%;
           height: 60px;
+          color: #1c1d18;
+          text-align: center;
+          .title-inner {
+            display: table-cell;
+            vertical-align: middle;
+            cursor: default;
+          }
+          .name {
+            font-family: circle_bold;
+            font-size: 16px;
+            line-height: 18px;
+          }
+          .desc {
+            font-family: circle_light;
+            font-size: 15px;
+            line-height: 18px;
+          }
         }
 
         &:hover {
@@ -178,5 +212,180 @@ body {
         }
       }
     }
+  }
+}
+@media screen and (max-width: 1280px) {
+  .main-wrapper {
+    .menu {
+      padding: 6.9% 8% 8% 9%;
+      .logo {
+        width: 180px;
+        margin-left: -18px;
+        margin-bottom: 50px;
+      }
+      .intro {
+
+      }
+      .menu-section {
+        font-size: 24px;
+        line-height: 38px;
+      }
+      ul {
+
+      }
+      .social {
+        margin-top: 60px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 980px) {
+  .main-wrapper {
+    .menu {
+      width: 65%;
+      padding: 5.9% 12% 0% 7.7%;
+      overflow-y: auto;
+      .logo {
+
+      }
+      .intro {
+
+      }
+      .menu-section {
+
+      }
+      ul {
+
+      }
+      .social {
+
+      }
+    }
+    .projects {
+      width: 40%;
+      .wrapper {
+        .block {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 690px) {
+  .main-wrapper {
+    .menu {
+      width: 75%;
+      padding: 5.9% 12% 0% 7.7%;
+
+      .logo {
+
+      }
+      .intro {
+        p {
+          font-size: 14px;
+        }
+      }
+      .menu-section {
+
+      }
+      ul {
+        li {
+          a {
+            font-size: 16px;
+            line-height: 32px;
+          }
+        }
+      }
+      .open {
+        max-height: 400px;
+      }
+      .social {
+
+      }
+    }
+    .projects {
+      width: 30%;
+      .wrapper {
+        .block {
+          a {
+            background-position: center;
+          }
+        }
+        &:hover {
+          a {
+            top: 0px !important;
+            transition: all .35s ease-out;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-height: 980px) {
+  .main-wrapper {
+    .menu {
+      padding: 6.9% 8% 8% 9.7%;
+      .logo {
+        width: 180px;
+        margin-left: -18px;
+        margin-bottom: 50px;
+      }
+      .intro {
+
+      }
+      .menu-section {
+
+      }
+      ul {
+
+      }
+      .social {
+        margin-top: 60px;
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 768px) {
+  .main-wrapper {
+    .menu {
+      padding: 6.9% 8% 8% 9.7%;
+      .logo {
+        width: 180px;
+        margin-left: -18px;
+        margin-bottom: 30px;
+      }
+      .intro {
+
+      }
+      .menu-section {
+        font-size: 24px;
+        line-height: 38px;
+      }
+      ul {
+
+      }
+      .social {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+polyline{fill:none;stroke:#FBB040;stroke-width:3;stroke-miterlimit:10;}
+.st0 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 20s linear forwards;
+}
+.st1 {
+  stroke-dasharray: 620;
+  stroke-dashoffset: 620;
+  animation: dash 20s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
   }
 }
