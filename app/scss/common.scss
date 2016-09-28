@@ -46,11 +46,13 @@ body {
     .logo {
       width: 258px;
       margin-left: -28px;
-      margin-bottom: 130px;
+      margin-bottom: 90px;
     }
     .intro {
       max-height: 0;
       //opacity: 0;
+      padding-right: 65px;
+
       transition: all .45s linear;
       overflow: hidden;
       cursor: default;
@@ -58,6 +60,9 @@ body {
         font-size: 17px;
         color: #1c1d18;
       }
+    }
+    .intro.open {
+      padding-bottom: 47px;
     }
     .menu-section {
       display: block;
@@ -108,6 +113,9 @@ body {
         }
       }
     }
+    ul.open {
+      margin-bottom: 24px;
+    }
     .open {
       max-height: 350px;
       opacity: 1;
@@ -156,7 +164,8 @@ body {
       transition: all .35s ease-out;
 
       .block {
-        height: 27%;
+        height: 28%;
+        max-height: 300px;
         width: 50%;
         float: left;
         position: relative;
@@ -274,7 +283,7 @@ body {
 @media screen and (max-width: 690px) {
   .main-wrapper {
     .menu {
-      width: 75%;
+      width: 100%;
       padding: 5.9% 12% 0% 7.7%;
 
       .logo {
@@ -304,7 +313,7 @@ body {
       }
     }
     .projects {
-      width: 30%;
+      width: 0;
       .wrapper {
         .block {
           a {
