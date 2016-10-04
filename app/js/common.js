@@ -25,8 +25,10 @@ $(window).on('load', function () {
         }
     }
     preloadImages("/../images/des/project_1.jpg","/../images/des/project.jpg","/../images/des/project_2.jpg","/../images/des/project_3.jpg",
-        "/..images/des/project_4.jpg","/..images/des/project_5.jpg","/..images/des/project_6.jpg","/..images/des/project_7.jpg");
+        "/../images/des/project_4.jpg","/../images/des/project_5.jpg","/../images/des/project_6.jpg","/../images/des/project_7.jpg");
 });
+
+var block  = $(".block");
 
 function scrollers() {
     var scrolled           = 0,
@@ -34,7 +36,6 @@ function scrollers() {
         scroller_up        = $(".scroller_up"),
         projects           = $(".projects .wrapper"),
         projectsOutHeight  = projects.height(),
-        block              = $(".block"),
         projectsHeight     = projects.innerHeight(),
         windowWidth        = $(window).width(),
         blockLength        = (block.length)/2;
@@ -84,11 +85,27 @@ function fontSizeIntro() {
         introP.removeClass("font-lower");
     }
 }
+function projectTitle() {
+    var title            = $(".title");
+
+    $.each(block, function(i, el) {
+        var pic = $(this).find(".project-pic");
+        $(this).hover(
+            function() {
+                var titleHeight = $(this).find(title).innerHeight();
+                pic.css("top", -titleHeight);
+            }, function() {
+                pic.css("top", 0);
+            }
+        );
+    });
+}
+
 
 $(document).ready(function() {
+    //$("html").addClass(platform.name.toLowerCase());
     //список
-    $("#directions").on("click", function(){
-        event.preventDefault();
+    $("#directions").click(function() {
         var intro = $(".menu .intro"),
             ul    = $(".menu ul");
 
@@ -97,10 +114,12 @@ $(document).ready(function() {
     });
 
     scrollers();
-    fontSizeIntro();
+    //fontSizeIntro();
+    projectTitle();
 
 });
 $(window).on('resize', function(){
     scrollers();
-    fontSizeIntro();
+    //fontSizeIntro();
+    projectTitle();
 });

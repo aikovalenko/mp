@@ -36,7 +36,8 @@ gulp.task('scripts', function() {
         'app/libs/jquery/dist/jquery.min.js', // Берем jQuery
         'app/libs/materialize/dist/js/materialize.min.js',
         'app/libs/fastclick/lib/fastclick.js',
-        'app/libs/modernizr/modernizr-custom.js'
+        'app/libs/modernizr/modernizr-custom.js',
+        'app/libs/platform.js'
     ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл
