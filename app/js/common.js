@@ -103,7 +103,8 @@ function projectTitle() {
 
 
 $(document).ready(function() {
-    //$("html").addClass(platform.name.toLowerCase());
+    $("html").addClass(platform.name.toLowerCase());
+    $("html").addClass(platform.os.family.toLowerCase());
     //список
     $("#directions").click(function() {
         var intro = $(".menu .intro"),
