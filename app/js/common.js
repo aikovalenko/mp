@@ -117,6 +117,28 @@ $(document).ready(function() {
     scrollers();
     //fontSizeIntro();
     projectTitle();
+    // var emailPattern = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+    // var inputSubs    = document.getElementById('subscribe');
+    // var checkbox    = document.getElementById('checkbox');
+    // checkbox = $(document).find('input[type="checkbox"]');
+    // if ($('#checkbox').attr("checked",true)) {
+    //     inputSubs.disabled = false;
+    //     console.log('ad');
+    // }
+    // text.oninput = function () {
+    //     if (this.value != '' && emailPattern.test(this.value)) {
+    //         console.log(this.value);
+    //         inputSubs.disabled = false;
+    //     }
+    //     else inputSubs.disabled = true;
+    // };
+    // var input = $(val),
+    //     val = input.val(),
+    //     rv_email = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+    //
+    // if(val != '' && rv_email.test(val)){
+    //     $(this).css('border', '1px solid white');
+    // }
 
 });
 $(window).on('resize', function(){
