@@ -587,6 +587,7 @@ body {
     position: static;
   }
 }
+
 $duration: .4s;
 $step: .3s;
 polyline{fill:none;stroke:#FBB040;stroke-width:3;stroke-miterlimit:10;}
@@ -610,9 +611,6 @@ polyline{fill:none;stroke:#FBB040;stroke-width:3;stroke-miterlimit:10;}
 
   }
 }
-
-
-
 
 .letter-1 {
   transform: rotateY(90deg);
