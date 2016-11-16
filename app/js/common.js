@@ -18,14 +18,14 @@ $(window).on('load', function () {
 
     }, 1000);
 
-    function preloadImages() {
-
-        for(var i = 0; i<arguments.length; i++) {
-            $("<img />").attr("src", arguments[i]);
-        }
-    }
-    preloadImages("/../images/des/project_1.jpg","/../images/des/project.jpg","/../images/des/project_2.jpg","/../images/des/project_3.jpg",
-        "/../images/des/project_4.jpg","/../images/des/project_5.jpg","/../images/des/project_6.jpg","/../images/des/project_7.jpg");
+    // function preloadImages() {
+    //
+    //     for(var i = 0; i<arguments.length; i++) {
+    //         $("<img />").attr("src", arguments[i]);
+    //     }
+    // }
+    // preloadImages("/../images/des/project_1.jpg","/../images/des/project.jpg","/../images/des/project_2.jpg","/../images/des/project_3.jpg",
+    //     "/../images/des/project_4.jpg","/../images/des/project_5.jpg","/../images/des/project_6.jpg","/../images/des/project_7.jpg");
 });
 
 var block  = $(".block");
@@ -120,18 +120,28 @@ $(document).ready(function() {
     // var emailPattern = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
     // var inputSubs    = document.getElementById('subscribe');
     // var checkbox    = document.getElementById('checkbox');
-    // checkbox = $(document).find('input[type="checkbox"]');
-    // if ($('#checkbox').attr("checked",true)) {
-    //     inputSubs.disabled = false;
-    //     console.log('ad');
-    // }
+    // var validCheckbox = false;
+    // var validInput = false;
+    // checkbox.onchange = function() {
+    //
+    //     if (checkbox.checked == true) {
+    //         //inputSubs.disabled = false;
+    //         validCheckbox = true;
+    //     }
+    //     else validCheckbox = false;
+    // };
     // text.oninput = function () {
     //     if (this.value != '' && emailPattern.test(this.value)) {
     //         console.log(this.value);
-    //         inputSubs.disabled = false;
+    //         validInput = false;
+    //         //inputSubs.disabled = false;
     //     }
-    //     else inputSubs.disabled = true;
+    //     else validInput = true;
     // };
+    // if (validInput == true && validCheckbox == true) {
+    //     inputSubs.disabled = false;
+    //     console.log(validInput, validCheckbox);
+    // }
     // var input = $(val),
     //     val = input.val(),
     //     rv_email = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;

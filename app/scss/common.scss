@@ -587,23 +587,65 @@ body {
     position: static;
   }
 }
-
+$duration: .4s;
+$step: .3s;
 polyline{fill:none;stroke:#FBB040;stroke-width:3;stroke-miterlimit:10;}
 .smil {
   .st0 {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: dash 20s linear forwards;
+    animation-delay: 5*$step;
   }
   .st1 {
     stroke-dasharray: 620;
     stroke-dashoffset: 620;
     animation: dash 20s linear forwards;
+    animation-delay: 5*$step;
   }
 }
-
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
+
+  }
+}
+
+
+
+
+.letter-1 {
+  transform: rotateY(90deg);
+  transform-origin: center;
+  animation: rotate $duration linear forwards;
+}
+.letter-2 {
+  transform: rotateY(90deg);
+  transform-origin: center;
+  animation: rotate $duration linear forwards;
+  animation-delay: $step;
+}
+.letter-3 {
+  transform: rotateY(90deg);
+  transform-origin: center;
+  animation: rotate .4s linear forwards;
+  animation-delay: 2*$step;
+}
+.letter-4 {
+  transform: rotateY(90deg);
+  transform-origin: center;
+  animation: rotate .4s linear forwards;
+  animation-delay: 3*$step;
+}
+.wave-2 {
+  transform: rotateY(90deg);
+  transform-origin: center;
+  animation: rotate .4s linear forwards;
+  animation-delay: 4*$step;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotateY(0deg);
   }
 }
