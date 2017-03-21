@@ -1,22 +1,40 @@
-@mixin fontFace($family,$src,$style: normal,$weight: normal) {
+//@mixin fontFace($family,$src,$style: normal,$weight: normal) {
+//  @font-face {
+//    font-family: $family;
+//    src: url('#{$src}.eot'); // IE9 compat
+//    src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+//    url('#{$src}.woff') format('woff'), // standards
+//    url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
+//    url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+//
+//    font-style: $style;
+//    font-weight: $weight;
+//  }
+//}
+@mixin fontFace($family,$src,$weight,$style: normal) {
   @font-face {
     font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
     src: url('#{$src}.eot'); // IE9 compat
     src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
     url('#{$src}.woff') format('woff'), // standards
     url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
     url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
-
-    font-style: $style;
-    font-weight: $weight;
   }
 }
-@include fontFace('circle_thin','/css/fonts/crc15');
-@include fontFace('circle_extrathin','/css/fonts/crc25');
-@include fontFace('circle_light','/css/fonts/crc35');
-@include fontFace('circle_regular','/css/fonts/crc55');
-@include fontFace('circle_bold','/css/fonts/crc65');
-@include fontFace('circle_extrabold','/css/fonts/crc75');
+//@include fontFace('circle_thin','/css/fonts/crc15');
+//@include fontFace('circle_extrathin','/css/fonts/crc25');
+//@include fontFace('circle_light','/css/fonts/crc35');
+//@include fontFace('circle_regular','/css/fonts/crc55');
+//@include fontFace('circle_bold','/css/fonts/crc65');
+//@include fontFace('circle_extrabold','/css/fonts/crc75');
+
+@include fontFace('circle','/fonts/crc15', 200);
+@include fontFace('circle','/fonts/crc25', 100);
+@include fontFace('circle','/fonts/crc35', 300);
+@include fontFace('circle','/fonts/crc55', 400);
+@include fontFace('circle','/fonts/crc65', 500);
 
 body {
   overflow: hidden;
@@ -253,11 +271,13 @@ body {
           color: #1c1d18;
           text-align: center;
           box-sizing: border-box;
+          outline: none;
           .title-inner {
             display: table-cell;
             vertical-align: middle;
             color: #1c1d18;
             text-decoration: none;
+            outline: none;
           }
           .name {
             display: block;
@@ -613,9 +633,18 @@ polyline{fill:none;stroke:#FBB040;stroke-width:3;stroke-miterlimit:10;}
 }
 
 .letter-1 {
+  position: relative;
   transform: rotateY(90deg);
   transform-origin: center;
   animation: rotate $duration linear forwards;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+  }
 }
 .letter-2 {
   transform: rotateY(90deg);
@@ -646,4 +675,49 @@ polyline{fill:none;stroke:#FBB040;stroke-width:3;stroke-miterlimit:10;}
   to {
     transform: rotateY(0deg);
   }
+}
+
+.mfp-bg {
+  background-color: #fff;
+  opacity: 1;
+}
+.mfp-container {
+  padding: 0;
+}
+.mfp-close-btn-in .mfp-close {
+  color: #f1a639;
+}
+.mfp-close {
+  position: fixed;
+  right: 32px;
+  top: 37px;
+  font-size: 40px;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  &:active {
+    top: 37px;
+  }
+}
+.mfp-content-inner {
+  padding-top: 60px;
+  padding-left: 250px;
+  padding-right: 150px;
+}
+.column {
+  display: flex;
+}
+.column > div {
+  width: 50%;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 4px solid #fcb040;
+  line-height: 1;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #010101;
 }

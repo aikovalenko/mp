@@ -101,7 +101,6 @@ function projectTitle() {
     });
 }
 
-
 $(document).ready(function() {
     $("html").addClass(platform.name.toLowerCase());
     $("html").addClass(platform.os.family.toLowerCase());
@@ -117,6 +116,34 @@ $(document).ready(function() {
     scrollers();
     //fontSizeIntro();
     projectTitle();
+
+    $('a[data-ajax-on-modal]').magnificPopup({
+        type: 'ajax',
+        tLoading: '<div class="spinner"><img src="/images/des/ring.svg"></div>',
+        mainClass: 'ajax-modal',
+        closeOnBgClick: false,
+        enableEscapeKey: false,
+        callbacks: {
+            ajaxContentAdded: function () {
+                // var currId = $.magnificPopup.instance.currItem.el.attr('id');
+                // var oldAnchor = location.hash;
+                var url = ($.magnificPopup.instance.currItem.src);
+
+                window.history.pushState('page2', 'Title', '#' + url);
+                console.log(window.location.hash);
+                $('.ajax-modal').find('.mfp-close').on('click', function (e) {
+                    e.preventDefault();
+                    $.magnificPopup.close();
+                    window.history.back();
+
+                });
+            }
+        }
+    });
+
+
+
+
     // var emailPattern = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
     // var inputSubs    = document.getElementById('subscribe');
     // var checkbox    = document.getElementById('checkbox');
