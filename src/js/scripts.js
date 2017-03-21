@@ -16,7 +16,7 @@ $(window).on('load', function () {
         });
         */
 
-    }, 1000);
+    }, 1);
 
     // function preloadImages() {
     //
