@@ -16,6 +16,7 @@ var gulp = require('gulp'),
     include = require('gulp-file-include'),
     cleanCSS = require('gulp-clean-css'),
     csscomb = require('gulp-csscomb'),
+    uglify = require('gulp-uglify'),
     cache = require('gulp-cache');
 
 
@@ -110,8 +111,8 @@ gulp.task('style:dist', function () {
     gulp.src(path.src.style)
         .pipe(sass())
         .pipe(prefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        // .pipe(cleanCSS())
-        .pipe(csscomb())
+        .pipe(cleanCSS())
+        // .pipe(csscomb())
         .pipe(gulp.dest(path.dist.css));
 });
 
@@ -165,6 +166,7 @@ gulp.task('js:build', function () {
 gulp.task('js:dist', function () {
     gulp.src(path.src.js)
         .pipe(rigger())
+        .pipe(uglify())
         .pipe(gulp.dest(path.dist.js));
 });
 

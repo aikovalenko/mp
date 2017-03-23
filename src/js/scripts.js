@@ -140,43 +140,6 @@ $(document).ready(function() {
             }
         }
     });
-
-
-
-
-    // var emailPattern = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
-    // var inputSubs    = document.getElementById('subscribe');
-    // var checkbox    = document.getElementById('checkbox');
-    // var validCheckbox = false;
-    // var validInput = false;
-    // checkbox.onchange = function() {
-    //
-    //     if (checkbox.checked == true) {
-    //         //inputSubs.disabled = false;
-    //         validCheckbox = true;
-    //     }
-    //     else validCheckbox = false;
-    // };
-    // text.oninput = function () {
-    //     if (this.value != '' && emailPattern.test(this.value)) {
-    //         console.log(this.value);
-    //         validInput = false;
-    //         //inputSubs.disabled = false;
-    //     }
-    //     else validInput = true;
-    // };
-    // if (validInput == true && validCheckbox == true) {
-    //     inputSubs.disabled = false;
-    //     console.log(validInput, validCheckbox);
-    // }
-    // var input = $(val),
-    //     val = input.val(),
-    //     rv_email = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
-    //
-    // if(val != '' && rv_email.test(val)){
-    //     $(this).css('border', '1px solid white');
-    // }
-
 });
 $(window).on('resize', function(){
     scrollers();

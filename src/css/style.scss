@@ -10,12 +10,6 @@
     url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
   }
 }
-//@include fontFace('circle_thin','/css/fonts/crc15');
-//@include fontFace('circle_extrathin','/css/fonts/crc25');
-//@include fontFace('circle_light','/css/fonts/crc35');
-//@include fontFace('circle_regular','/css/fonts/crc55');
-//@include fontFace('circle_bold','/css/fonts/crc65');
-//@include fontFace('circle_extrabold','/css/fonts/crc75');
 
 @include fontFace('circle','/fonts/crc15', 100);
 @include fontFace('circle','/fonts/crc25', 200);
@@ -41,6 +35,8 @@ body {
   opacity: 1;
   z-index: 100000;
   transition: all .35s ease-out;
+  display: flex;
+  align-items: center;
   .preloader-wrapper {
     display: table;
     top: 43%;
@@ -48,6 +44,9 @@ body {
     .spinner-layer {
       border-color: #fcb040;
     }
+  }
+  .spinner {
+    margin: 0 auto;
   }
 }
 .main-wrapper {
@@ -200,6 +199,7 @@ body {
           background-position: center;
           transition: all .35s ease-out;
           z-index: 100;
+          outline: none;
         }
         .title-wrap {
 
@@ -675,7 +675,10 @@ polyline{fill:none;stroke:#FBB040;stroke-width:3;stroke-miterlimit:10;}
   opacity: 1;
 }
 .mfp-s-loading {
-  background-color: #fff;
+  //background-color: #fff;
+}
+.ajax-modal .mfp-preloader {
+  z-index: 1100;
 }
 .mfp-container {
   padding: 0;
