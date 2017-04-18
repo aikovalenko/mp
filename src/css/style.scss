@@ -791,6 +791,12 @@ polyline{fill:none;stroke:#FBB040;stroke-width:3;stroke-miterlimit:10;}
     display: none;
   }
 }
+.quotation__img {
+  img {
+    display: block;
+    border-radius: 50%;
+  }
+}
 .column__desc__logo {
   display: inline-block;
   margin-bottom: 60px;

@@ -136,7 +136,9 @@ $(document).ready(function() {
                     $.magnificPopup.close();
                     window.history.back();
 
+
                 });
+                $(".player").flowplayer();
             }
         }
     });
